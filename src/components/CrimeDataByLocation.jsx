@@ -45,7 +45,7 @@ const CrimeDataByLocation = () => {
 
       // Make a request to fetch geocode data for the location
       const geocodeResponse = await axios.get(
-        `https://api.opencagedata.com/geocode/v1/json?q=${location}&key=e12ca46d266b44aeb1a74edae73142c7`
+        `https://api.opencagedata.com/geocode/v1/json?q=${location}&key=${process.env.REACT_APP_API_KEY}`
       );
       const results = geocodeResponse.data.results;
       if (results.length === 0) throw new Error("Invalid location. Please try again");// Handle case where location is invalid
