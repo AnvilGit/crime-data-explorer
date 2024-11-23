@@ -25,3 +25,6 @@ dist-ssr
 
 # API key
 .env
+
+# Others
+CrimeDateByLoc.jsx
