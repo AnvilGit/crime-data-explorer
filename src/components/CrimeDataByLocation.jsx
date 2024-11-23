@@ -4,6 +4,7 @@ import InputForm from "./InputForm";
 import DataTable from "./DataTable";
 import LoadingSpinner from "./LoadingSpinner";
 import ErrorMessage from "./ErrorMessage";
+import Pagination from "./Pagination";
 
 const CrimeDataByLocation = () => {
   // State variables
@@ -12,6 +13,8 @@ const CrimeDataByLocation = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10; // Items per page
   const cache = {};
 
   // Fetch coordinates for the given location
@@ -20,6 +23,7 @@ const CrimeDataByLocation = () => {
     setLoading(true);
     setError(null);
     setData(null);
+    setCurrentPage(1); // Reset to the first page
 
     // Check if the location input is empty
     if (!location.trim()) {
@@ -74,6 +78,16 @@ const CrimeDataByLocation = () => {
     }
   };
 
+   // Handle page change
+   const onPageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  // Calculate data for the current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentPageData = data ? data.slice(startIndex, startIndex + itemsPerPage) : [];
+  const totalPages = data ? Math.ceil(data.length / itemsPerPage) : 0;
+
   return (
     <div className="content-container">
       <h1 style={{marginBottom:"20px"}}>Crime Data Explorer</h1>
@@ -81,7 +95,7 @@ const CrimeDataByLocation = () => {
       <p>Our application allows users to access real-time crime data, providing insights into safety and security in neighborhoods.</p>
 
       <p>Just enter the location and select a specific crime category to retrieve detailed information about incidents in that area. </p>
-      <p>Our app utilizes reliable geolocation services for accurate data retrieval, empowering you to make informed decisions.</p>
+      
       <p>Explore crime statistics today and enhance your awareness of local safety issues.</p>
 
       <InputForm
@@ -94,7 +108,16 @@ const CrimeDataByLocation = () => {
 
       {loading && <LoadingSpinner />}
       {error && <ErrorMessage message={error} />}
-      {data && <DataTable data={data} />}
+      {data && (
+        <>
+          <DataTable data={currentPageData} />
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={onPageChange}
+          />
+        </>
+      )}
     </div>
   );
 };
