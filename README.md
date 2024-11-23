@@ -81,7 +81,7 @@ Click on the link to see the application
 
 
 ### API Information
-####This application uses the following APIs:
+- This application uses the following APIs:
 1. OpenCage Geocoding API:
 - Fetches geolocation data (latitude & longitude) based on user input.
 - OpenCage API Documentation
@@ -107,7 +107,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - All contributors and the open source community.
 
 
-###Future Enhancements
+### Future Enhancements
 - Add support for non-UK locations.
 - Improve UI/UX for mobile devices.
 - Include visualization (e.g., graphs or heatmaps) for crime trends.
