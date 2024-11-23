@@ -81,7 +81,7 @@ Click on the link to see the application
 
 
 ### API Information
-- This application uses the following APIs:
+ This application uses the following APIs:
 1. OpenCage Geocoding API:
 - Fetches geolocation data (latitude & longitude) based on user input.
 - OpenCage API Documentation
