@@ -95,10 +95,8 @@ const CrimeDataByLocation = () => {
       <p>Welcome to Crime Data Explorer, your essential resource for understanding crime trends in various locations. </p>
       <p>Our application allows users to access real-time crime data, providing insights into safety and security in neighborhoods.</p>
 
-      <p>Just enter the location and select a specific crime category to retrieve detailed information about incidents in that area. </p>
+      <p>Enter a location and crime category to access detailed incident information and local safety statistics. </p>
       
-      <p>Explore crime statistics today and enhance your awareness of local safety issues.</p>
-
       <InputForm
         location={location}
         category={category}
@@ -110,16 +108,21 @@ const CrimeDataByLocation = () => {
       {loading && <LoadingSpinner />}
       {error && <ErrorMessage message={error} />}
       {data && (
-        <>
-          <DataTable data={currentPageData} />
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={onPageChange}
-          />
-        </>
-      )}
-    </div>
+  <>
+    <p>
+      A total of <strong>{data.length}</strong> incidents of{" "}
+      <strong>{category.replace("-", " ")}</strong> were reported in{" "}
+      <strong>{location}</strong>.
+    </p>
+    <DataTable data={currentPageData} />
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPages}
+      onPageChange={onPageChange}
+    />
+  </>
+)}
+</div>
   );
 };
 
