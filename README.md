@@ -62,7 +62,7 @@ npm run dev
 
 ### Live Application URL
 
-The Application is deployed in https://aditya-sridhar.github.io/simple-reactjs-app
+The Application is deployed in https://crime-data-explorer.netlify.app
 Click on the link to see the application
 
 ### Usage
@@ -78,6 +78,7 @@ Click on the link to see the application
 - LoadingSpinner.jsx: Visual feedback for ongoing data retrieval
 - ErrorMessage.jsx: Displays user-friendly error messages
 - CrimeDataByLocation.jsx: Main component that manages application state and logic
+- Pagination.jsx
 
 
 ### API Information
