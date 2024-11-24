@@ -62,7 +62,7 @@ npm run dev
 
 ### Live Application URL
 
-The Application is deployed in https://aditya-sridhar.github.io/simple-reactjs-app
+The Application is deployed in https://crime-data-explorer.netlify.app
 Click on the link to see the application
 
 ### Usage
