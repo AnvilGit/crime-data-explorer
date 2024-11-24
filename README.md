@@ -78,6 +78,7 @@ Click on the link to see the application
 - LoadingSpinner.jsx: Visual feedback for ongoing data retrieval
 - ErrorMessage.jsx: Displays user-friendly error messages
 - CrimeDataByLocation.jsx: Main component that manages application state and logic
+- Pagination.jsx
 
 
 ### API Information
