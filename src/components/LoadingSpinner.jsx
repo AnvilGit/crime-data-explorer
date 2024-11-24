@@ -21,7 +21,17 @@ const LoadingSpinner = ({ message = "Fetching crime data from the API, please wa
 
 export default LoadingSpinner;
 
+// Add CSS for spinning animation
+const styles = `
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+`;
 
-
-
+// Inject styles into the document
+const styleSheet = document.createElement("style");
+styleSheet.type = "text/css";
+styleSheet.innerText = styles;
+document.head.appendChild(styleSheet);
 

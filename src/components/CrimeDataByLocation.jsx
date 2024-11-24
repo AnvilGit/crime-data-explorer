@@ -112,7 +112,7 @@ const CrimeDataByLocation = () => {
     <p>
       A total of <strong>{data.length}</strong> incidents of{" "}
       <strong>{category.replace("-", " ")}</strong> were reported in{" "}
-      <strong>{location}</strong>.
+      <strong>{location}</strong> 
     </p>
     <DataTable data={currentPageData} />
     <Pagination
