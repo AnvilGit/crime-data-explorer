@@ -6,6 +6,7 @@ import CrimeDataByLocation from './components/CrimeDataByLocation';
 import About from './pages/About'; // 
 import Footer from './components/Footer'; 
 
+
 const App = () => {
     return (
         <Router>

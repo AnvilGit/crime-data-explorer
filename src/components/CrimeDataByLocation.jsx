@@ -6,6 +6,7 @@ import LoadingSpinner from "./LoadingSpinner";
 import ErrorMessage from "./ErrorMessage";
 import Pagination from "./Pagination";
 
+
 const CrimeDataByLocation = () => {
   // State variables
   const [location, setLocation] = useState("");
@@ -45,7 +46,7 @@ const CrimeDataByLocation = () => {
 
       // Make a request to fetch geocode data for the location
       const geocodeResponse = await axios.get(
-        `https://api.opencagedata.com/geocode/v1/json?q=${location}&key=${process.env.REACT_APP_API_KEY}`
+        `https://api.opencagedata.com/geocode/v1/json?q=${location}&key=${import.meta.env.VITE_API_KEY}`
       );
       const results = geocodeResponse.data.results;
       if (results.length === 0) throw new Error("Invalid location. Please try again");// Handle case where location is invalid
