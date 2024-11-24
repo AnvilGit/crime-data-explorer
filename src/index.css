@@ -16,7 +16,8 @@ html {
 
 /* Style the body element */
 body {
-  background: #eee;
+  background: url('/crime_bg.webp') no-repeat center center fixed; /* Set the background image */
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: flex-start; /* Align body content at the top */
