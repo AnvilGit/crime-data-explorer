@@ -58,12 +58,18 @@ npm run dev
 
 
 
-4. Open your browser and go to http://localhost:5173 to view the application.
+4. Open your browser and go to http://localhost:5173   to view the application.
+- You need API key to see it working extracting live data from Polic API.
+- Goto https://opencagedata.com/ and signup 
+- Once signed up, go Geocoding API tab, you will see your API key, paste that API key on // Make a request to fetch geocode data for the location section
+- It's gonna look something like this: `https://api.opencagedata.com/geocode/v1/json?q=${location}&key=${import.meta.env.VITE_API_KEY}`
+- Once you paste your API key it should look like this:
+- `https://api.opencagedata.com/geocode/v1/json?q=${location}&key=e12ca46d266b44aehg74edae73142c7`
 
 ### Live Application URL
 
 The Application is deployed in https://crime-data-explorer.netlify.app
-Click on the link to see the application
+- Click on the link to see the application
 
 ### Usage
 - Enter a Location: Input the name of the city or town you want to query.
