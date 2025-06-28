@@ -7,11 +7,11 @@ const About = () => {
             <h1>About Crime Data Explorer</h1>
             <p>
                 Crime Data Explorer is a platform designed to help individuals understand crime trends 
-                and safety measures in various locations. Our goal is to provide accurate and accessible 
+                and safety measures in various locations in UK. The goal is to provide accurate and accessible 
                 information for a safer and more informed community.
             </p>
             <p>
-                This project integrates reliable geolocation services and public crime data APIs 
+                This project integrates reliable geolocation services and UK police public crime data APIs 
                 to give real-time insights into crime incidents across neighborhoods. 
             </p>
             <p>
